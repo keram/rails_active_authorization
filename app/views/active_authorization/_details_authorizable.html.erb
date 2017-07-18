@@ -1,0 +1,50 @@
+<hr/>
+<h2>Developer details</h2>
+<h3>
+    Receiver:
+</h3>
+<p>
+    <%= receiver %>
+</p>
+<h3>
+    Message <span style="font-weight: normal;">(action name)</span>:
+</h3>
+<p>
+    <%= message_name %>
+</p>
+<h3>
+    Seeker:
+</h3>
+<p>
+    <%= seeker %>
+</p>
+<h3>
+    Roles:
+</h3>
+<p>
+<%= roles.join(', ') %>
+</p>
+<h3>
+Applied Authorizations:
+</h3>
+<p>
+<% authorizations.fetch(:applied).each do |auth| %>
+    <%= auth %><br>
+<% end %>
+</p>
+<h3>
+Scoped Authorizations:
+</h3>
+<p>
+<% authorizations.fetch(:scoped).each do |auth| %>
+    <%= auth %><br>
+<% end %>
+</p>
+<h3>
+All Authorizations:
+</h3>
+<p>
+<% authorizations.fetch(:all).each do |auth| %>
+    <%= auth %><br>
+<% end %>
+</p>
